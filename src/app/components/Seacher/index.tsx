@@ -1,8 +1,7 @@
-import { House, MagnifyingGlass } from "@phosphor-icons/react";
+import * as Icon from '@phosphor-icons/react'
+import { Children, ReactNode } from 'react'
 
-export const Seacher = () => {
-    return(
-        <nav className="bg-zinc-800 flex flex-col rounded">
+{/* <nav className="bg-zinc-800 flex flex-col rounded">
             <a
               href=""
               className="text-zinc-200 p-3 flex items-center gap-4 transition-colors hover:tex-zinc-700"
@@ -10,10 +9,34 @@ export const Seacher = () => {
               <House size={28} />
               Início
             </a>
-            <a href="" className="text-zinc-200 p-3 flex items-center gap-4">
-              <MagnifyingGlass size={28} />
-              Buscar
+           
+          </nav> */}
+
+interface iSeacherProps {
+  link: string,
+  icon: Icon.IconProps,
+  text: string
+  children?:ReactNode
+}
+
+export const Seacher = ({
+  link,
+  icon,
+  text,
+  children
+}:iSeacherProps) => {
+    return(
+            <a
+              href={link}
+              className="text-zinc-200 p-3 flex items-center gap-4 transition-colors hover:tex-zinc-700"
+            >
+              <>
+              {icon}
+              </>
+              {text}
+              {children}
             </a>
-          </nav>
+           
+          
     )
 }

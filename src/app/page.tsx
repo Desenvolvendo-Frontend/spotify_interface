@@ -13,13 +13,14 @@ export default function Home() {
     <div className="h-screen flex flex-col bg-zinc-900 ">
       <div className="flex flex-1 ">
         <aside className="w-76 p-2">
-          <Seacher/>
+          <nav className="bg-zinc-800 flex flex-col rounded">
+            <Seacher text='Início' icon={<House size={28}/>} link="#"/>
+            <Seacher text='Busca' icon={<MagnifyingGlass size={28}/>} link="#"/>
+          </nav>
           <div className="bg-zinc-800 mt-2 p-2 rounded">
-            <a href="" className="text-zinc-300 p-3 flex items-center gap-4">
-              <Library size={28} />
-              Sua Biblioteca
+            <Seacher text="Sua Biblioteca" icon={<Library size={28}/>} link="#">
               <Plus className="ml-14" />
-            </a>
+            </Seacher>
             <div className="flex gap-2 mt-4">
               <a
                 href=""
