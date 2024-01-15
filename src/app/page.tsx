@@ -5,25 +5,15 @@ import {
   ListChecks,
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
+import {Seacher} from "./components/Seacher";
+
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col bg-zinc-900 ">
       <div className="flex flex-1 ">
         <aside className="w-76 p-2">
-          <nav className="bg-zinc-800 flex flex-col rounded">
-            <a
-              href=""
-              className="text-zinc-200 p-3 flex items-center gap-4 transition-colors hover:tex-zinc-700"
-            >
-              <House size={28} />
-              Início
-            </a>
-            <a href="" className="text-zinc-200 p-3 flex items-center gap-4">
-              <MagnifyingGlass size={28} />
-              Buscar
-            </a>
-          </nav>
+          <Seacher/>
           <div className="bg-zinc-800 mt-2 p-2 rounded">
             <a href="" className="text-zinc-300 p-3 flex items-center gap-4">
               <Library size={28} />
@@ -72,7 +62,7 @@ export default function Home() {
                 </p>
               </div>
             </a>
-            <a className="space-y-3 mt-4 flex items-center">
+            <a className="space-y-3 mt-4 flex items-center overflow-hidden">
               <Image
                 width={60}
                 height={5}
@@ -89,7 +79,7 @@ export default function Home() {
                 </p>
               </div>
             </a>
-            <a className="space-y-3 mt-4 flex items-center object-cover">
+            <a className="space-y-3 mt-4 flex items-center overflow-hidden">
               <Image
                 width={60}
                 height={5}
@@ -106,11 +96,11 @@ export default function Home() {
                 </p>
               </div>
             </a>
-            <a className="space-y-3 mt-4 flex items-center">
+            <a className="space-y-3 mt-4 flex items-center overflow-hidden">
               <Image
                 width={60}
                 height={5}
-                src="/podcasts_photo.jpg"
+                src="/cantor1.jpg"
                 alt="Imagem referente ao podcast"
                 className="rounded-full"
               />
@@ -121,17 +111,17 @@ export default function Home() {
                 <p className="text-zinc-400 text-xs">Artista</p>
               </div>
             </a>
-            <a className="space-y-3 mt-4 flex items-center">
+            <a className="space-y-3 mt-4 flex items-center overflow-hidden">
               <Image
                 width={60}
                 height={5}
-                src="/podcasts_photo.jpg"
+                src="/cantor2.jpg"
                 alt="Imagem referente ao podcast"
                 className="rounded-full"
               />
               <div className="ml-4 flex flex-col gap-1">
                 <strong className="text-zinc-100 text-base">
-                  Marília Mendonça
+                  Gustavo Mioto
                 </strong>
                 <p className="text-zinc-400 text-xs">Artista</p>
               </div>
